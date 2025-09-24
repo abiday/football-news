@@ -6,6 +6,7 @@ from django.contrib.auth import authenticate, login, logout
 from django.http import HttpResponse
 from django.core import serializers
 from django.shortcuts import render, redirect, get_object_or_404
+from django.views.decorators.csrf import csrf_exempt
 from main.forms import NewsForm
 from main.models import News
 from django.contrib import messages
@@ -84,6 +85,7 @@ def show_json_by_id(request, news_id):
    except News.DoesNotExist:
        return HttpResponse(status=404)
    
+@csrf_exempt
 def register(request):
     form = UserCreationForm()
 
