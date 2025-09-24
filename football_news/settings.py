@@ -33,7 +33,7 @@ ALLOWED_HOSTS = ["localhost", "127.0.0.1", "abid-dayyan-footballnews.pbp.cs.ui.a
 
 ...
 CSRF_TRUSTED_ORIGINS = [
-    "https://abid-dayyan-footballnews.pbp.cs.ui.ac.id/"
+    "https://abid-dayyan-footballnews.pbp.cs.ui.ac.id"
 ]
 ...
 
